@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ASAP</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+    <!--FACEBOOK-->
+
+
+    <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+    <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Building Scalable Video Understanding Benchmarks <br> through Sports<br>
+                <small>
+                    In Review for NeurIPS Datasets & Benchmarks Track
+                </small>
+            </h2>
+        </div>
+        
+
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://github.com/asap-benchmark/asap-pipeline">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code, Benchmarks & Dataset</strong></h4>
+                        </a>
+                    </li>
+                    <!-- <li>
+                            <a href="https://ltvrr.github.io/challenge/">
+                            <image src="img/codalab.png" height="60px">
+                                <h4><strong>CodaLab Challenge</strong></h4>
+                            </a>
+                        </li> -->
+                    <!-- <li>
+                            <a href="https://github.com/">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    tl;dr
+                </h3>
+                <image src="img/asap.gif" class="img-responsive" alt="overview"><br>
+                    <image src="img/text.png" class="img-responsive" alt="overview"><br>
+                        <!-- <p class="text-justify">
+                        Existing benchmarks for evaluating long video understanding falls short on multiple aspects,
+                        either lacking in scale or quality of
+                        annotations. These limitations arise from the difficulty in collecting dense annotations for
+                        long videos (e.g. actions, dialogues,
+                        etc.), which are often obtained by manually labeling many frames per second. In this work, we
+                        introduce an automated <b>A</b>nnotation and
+                        Video <b>S</b>tream <b>A</b>lignment <b>P</b>ipeline (abbreviated ASAP).
+                        <br>
+                        We then leverage ASAP’s scalability to create <b>LCric</b>, a large-scale long video
+                        understanding benchmark, with over 1000 hours of densely
+                        annotated long Cricket videos (with an average sample length of ∼50 mins) collected at virtually
+                        <b>zero annotation cost</b>.
+
+                    </p> -->
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    ASAP
+                </h3>
+                <p class="text-justify">
+                    We propose an automated <b>A</b>nnotation and Video <b>S</b>tream <b>A</b>lignment <b>P</b>ipeline,
+                    that we dub as <b>ASAP</b>, which aligns video footage of sports
+                    matches to online commentary and scorecard information.
+                    We specifically target sports because:
+                <ol>
+                    <li>Video understanding over sports is much easier to define than arbitrary videos.</li>
+                    <li>Sports have a wide variety of possible events and actions that occur frequently. </li>
+                    <li>There is an abundance of rich natural language online commentary.</li>
+                </ol>
+                The full annotation pipeline is summarized below:
+                </p>
+                <div class="text-center">
+                    <div style="text-align:center;">
+                        <!-- <iframe src="https://www.youtube.com/embed/ceEuCXr8Ow8" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> -->
+                        <image src="img/asap_1.png" class="img-responsive" alt="scales"></image>
+                        <image src="img/asap_2.png" class="img-responsive" alt="scales"></image>
+                        <hr>
+                        <image src="img/asap_3.png" class="img-responsive" alt="scales"></image>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    LCric
+                </h3>
+                <p class="text-justify">
+                    We use <b>ASAP</b> to construct a benchmark for Long-horizon video understanding by annotating
+                    matches from the sport of <a href="https://www.youtube.com/watch?v=g-beFHld19c">Cricket</a>, which
+                    we call <b>LCric</b>. <br> <br>
+                    We chose Cricket because it has a relatively small action space that makes reasoning over it simpler
+                    than most long-video understanding problems. This makes it feasible as a benchmark for video
+                    understanding models, which currently struggle to handle reasoning over longer time spans.
+                    Specifically, our dataset builds on top of twelve distinct events that happen in Cricket:
+                <ul>
+                    <li><b>The number of runs(points)</b> scored by a team. The number of runs can range from <i>0 to
+                            9</i>
+                    </li>
+                    <li>A foul ball (termed as <b>wide</b>)</li>
+                    <li>An out ball (termed as <b>wicket</b>)</li>
+                </ul>
+                These "atomic" events are then aggregated over a long time span, so we can ask queries to a model about
+                what happened over the course of the time span. We call this set of queries our "Query Set".
+                </p>
+                <p style="text-align:center;">
+                    <image src="img/lcric-example.png" height="50px" class="img-responsive">
+                </p>
+                <p class="text-justify">
+                    A model with long horizon video understanding capabilities must be able to localize and detect the
+                    occurrence of distinct important events, while also aggregating such information to form a
+                    conclusion. In our dataset, we also create automated compositional queries that individually test
+                    the detection and aggregation skills of a model across a long horizon task. <br> <br>
+                    We automatically compose several types of queries to test the model's reasoning abilities.
+                    Specifically,
+                <ul>
+                    <li><b>binary</b> queries are a yes/no query about the occurrence of some set of events. An example
+                        of such a query is shown above.
+                    </li>
+                    <li><b>multi-choice</b> queries expand on the binary queries by asking the model to use context from
+                        the video to select an answer from a set of possible answers. </li>
+                    <li><b>regression</b> queries ask the model to determine the number of runs that occurred over a
+                        given time horizon. </li>
+                </ul>
+                Details for how query composition is formed can be found in the supplementary sections.
+                </p>
+
+                <p class="text-justify">
+                    We evaluate two of the recent baselines, namely <a
+                        href="https://www.robots.ox.ac.uk/~vgg/research/tqn/">TQN</a> and <a
+                        href="https://arxiv.org/abs/2201.08383">MemVit</a>,
+                    using on LCric and the compositional query set. We also ran a set of Amazon Mechanical Turk
+                    experiments to get a human baseline for our dataset that greatly outperforms the baselines,
+                    suggesting a huge room for improvement for state-of-the-art video understanding models on the LCric
+                    Benchmark and general long-horizon video understanding problems.
+                </p>
+                <p style="text-align:center;">
+                    <image src="img/lcric-performance.png" height="50px" class="img-responsive">
+                </p>
+            </div>
+        </div>
+=
+       
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
